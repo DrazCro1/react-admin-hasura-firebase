@@ -6,6 +6,19 @@
         "schema": "public",
         "name": "todos"
       },
+      "insert_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "check": {
+              "user_id": {
+                "_eq": "X-Hasura-User-Id"
+              }
+            },
+            "columns": []
+          }
+        }
+      ],
       "select_permissions": [
         {
           "role": "user",
@@ -41,9 +54,12 @@
           "role": "user",
           "permission": {
             "columns": [
+              "id",
+              "title",
               "is_completed",
               "is_public",
-              "title"
+              "created_at",
+              "user_id"
             ],
             "filter": {
               "user_id": {
@@ -78,9 +94,7 @@
         {
           "role": "user",
           "permission": {
-            "columns": [
-              "email"
-            ],
+            "columns": [],
             "filter": {
               "id": {
                 "_eq": "X-Hasura-User-Id"

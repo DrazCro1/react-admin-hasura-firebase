@@ -6,6 +6,7 @@ import hasuraDataProvider from "ra-data-hasura";
 //import PostIcon from '@material-ui/icons/Book';
 //import UserIcon from '@material-ui/icons/Group';
 import { FirebaseAuthProvider } from "react-admin-firebase";
+import CustomLoginPage from "./CustomLoginPage";
 
 // Define Firebase auth provider
 var firebaseConfig = {
@@ -48,6 +49,7 @@ const dataProvider = hasuraDataProvider('http://localhost:8081', httpClient);
 const App = () => {
   return (
     <Admin
+      loginPage={CustomLoginPage}
       dataProvider={dataProvider}
       authProvider={fbAuthProvider}
     >
