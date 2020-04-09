@@ -8,15 +8,17 @@ import hasuraDataProvider from "ra-data-hasura";
 import { FirebaseAuthProvider } from "react-admin-firebase";
 
 // Define Firebase auth provider
-const firebaseConfig = {
-  apiKey: "AIzaSyDL9pXM6XuKDKs-jcCuZuc263t6yAHk7xc",
-  authDomain: "react-admin-low-code.firebaseapp.com",
-  databaseURL: "https://react-admin-low-code.firebaseio.com",
-  projectId: "react-admin-low-code",
-  storageBucket: "react-admin-low-code.appspot.com",
-  messagingSenderId: "477028362078",
-  appId: "1:477028362078:web:9ab7803d11783132f6d1cf"
+var firebaseConfig = {
+  apiKey: "AIzaSyDqawfNnQJZnYe5gT6avbh0dMDd8bSZUYg",
+  authDomain: "nocodetests.firebaseapp.com",
+  databaseURL: "https://nocodetests.firebaseio.com",
+  projectId: "nocodetests",
+  storageBucket: "nocodetests.appspot.com",
+  messagingSenderId: "238378227919",
+  appId: "1:238378227919:web:9362ba62d0fb629959ffba",
+  measurementId: "G-2GZ2ZKN4HC"
 };
+
 const firebaseOptions = {
   // Enable logging of react-admin-firebase
   logging: true,
@@ -29,7 +31,7 @@ const fbAuthProvider = FirebaseAuthProvider(firebaseConfig, firebaseOptions);
 
 // Create a client for Hasura with the right headers
 const httpClient = (url, options = {}) => {
-    return fbAuthProvider.getJWTToken().then(function (JWT){
+  return fbAuthProvider.getJWTToken().then(function (JWT){
       if (!options.headers) {
           options.headers = new Headers({ Accept: 'application/json' });
       }

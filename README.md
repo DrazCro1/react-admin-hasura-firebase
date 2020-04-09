@@ -20,8 +20,12 @@ Logging into the frontend with these users, you can see that they can only view 
 
 You will need your own Firebase account if you wish to create users for your own project. 
 1. Create a free Firebase project. Copy the firebase config lines from Project Settings, General, Firebase SDK snippet.
-2. Replace the API config at the top of `src/App.JS` with the values from the step above.
-3. Create users, and replace their usernames and Firebase IDs in `migrations/sql/V1__todo_app.up.sql` with your own values.
+2. Install firebase and login `npm install -g firebase-tools && firebase login --no-localhost`
+3. Change the default project in `firebase/.firebaserc` to your project name
+4. Run `npm install && firebase deploy --only functions` from the `firebase/functions` directory
+5. Update the `FIREBASE_PROJECT` variable in `.env` with the name of your project
+6. Replace the API config at the top of `src/App.JS` with the values from the step above.
+7. Create users in Firebase, and replace their usernames and Firebase IDs in `migrations/sql/V1__todo_app.up.sql` with your own values. It's important to do this AFTER deploying Firebase functions
 
 ## Deploying the stack
 
