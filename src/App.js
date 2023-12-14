@@ -9,16 +9,15 @@ import { FirebaseAuthProvider } from "react-admin-firebase";
 import CustomLoginPage from "./CustomLoginPage";
 
 // Define Firebase auth provider
-var firebaseConfig = {
-  apiKey: "AIzaSyDqawfNnQJZnYe5gT6avbh0dMDd8bSZUYg",
-  authDomain: "nocodetests.firebaseapp.com",
-  databaseURL: "https://nocodetests.firebaseio.com",
-  projectId: "nocodetests",
-  storageBucket: "nocodetests.appspot.com",
-  messagingSenderId: "238378227919",
-  appId: "1:238378227919:web:9362ba62d0fb629959ffba",
-  measurementId: "G-2GZ2ZKN4HC"
-};
+const firebaseConfig = {
+  apiKey: "AIzaSyCWfty-yD4LFa8bVDPSEBMqZXh3yP_V3gc",
+  authDomain: "xroboinventory.firebaseapp.com",
+  projectId: "xroboinventory",
+  storageBucket: "xroboinventory.appspot.com",
+  messagingSenderId: "44975459814",
+  appId: "1:44975459814:web:57249a65b6f4971202da27",
+  measurementId: "G-1KHLYR28HS"
+};  // replace with your Firebase config
 
 const firebaseOptions = {
   // Enable logging of react-admin-firebase

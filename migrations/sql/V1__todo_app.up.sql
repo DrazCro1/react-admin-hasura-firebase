@@ -7,8 +7,8 @@ created_at timestamp with time zone not null default now(),
 last_seen timestamp with time zone
 );
 insert into public.users(id, email)
-SELECT cast('JZDHskXQdDSDdcUJH194JHnsEiN2' as varchar(100)) as id,
-       cast('brush701@gmail.com' as varchar(100)) as email;
+SELECT cast('xdxdsdsd1dsa' as varchar(100)) as id,
+       cast('factoryamar@gmail.com' as varchar(100)) as email;
 
 
 CREATE TABLE public.todos (
@@ -20,10 +20,10 @@ created_at timestamp with time zone not null default now(),
 user_id text not null references public.users(id)
 );
 INSERT INTO public.todos(title, is_completed, is_public, user_id)
-SELECT 'todo by brush701@gmail.com' as title, false as is_completed, false as is_public,
-       'JZDHskXQdDSDdcUJH194JHnsEiN2' as user_id UNION ALL
-SELECT 'public todo by brush701@gmail.com' as title, false as is_completed, true as is_public,
-       'JZDHskXQdDSDdcUJH194JHnsEiN2' as user_id;
+SELECT 'todo by factoryamar@gmail.com' as title, false as is_completed, false as is_public,
+       'xdxdsdsd1dsa' as user_id UNION ALL
+SELECT 'public todo by factoryamar@gmail.com' as title, false as is_completed, true as is_public,
+       'xdxdsdsd1dsa' as user_id;
 
 
 /* SET POSTGRES PERMISISONS FOR TODOS APP */
